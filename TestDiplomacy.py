@@ -26,12 +26,12 @@ class TestCollatz (TestCase):
         s = "A Madrid Hold\nB Barcelona Move Madrid\nC London Support B\nD Austin Move London\n"
         i = diplomacy_read(s)
         self.assertEqual(i,  [["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Support", "B"],\n
-                              ["D", "Austin", "Move", "London"])
+                              ["D", "Austin", "Move", "London"]])
 
     def test_read_3(self):
         s = "A Madrid Hold\nB Barcelona Move Madrid\nC London Move Madrid\nD Paris Support B\n"
         i = diplomacy_read(s)
-        self.assertEqual(i,  [[["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Move", "Madrid"],\n
+        self.assertEqual(i,  [["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Move", "Madrid"],\n
                               ["D", "Paris", "Support", "B"]])
 
     # ----
@@ -39,21 +39,19 @@ class TestCollatz (TestCase):
     # ----
 
     def test_eval(self):
-        v = diplomacy_eval(["A", "Madrid", "Hold"])
-        self.assertEqual(v, ["A", "Madrid"])
+        v = diplomacy_eval([["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Move", "Madrid"],\n
+                              ["D", "Paris", "Support", "B"], ["E", "Austin", "Support", "A"]])
+        self.assertEqual(v, [["A", "[dead]"], ["B", "[dead]"], ["C", "[dead]"], ["D", "Paris"], ["E", "Austin"]])
 
     def test_eval_2(self):
-        v = diplomacy_eval(["B", "Barcelona", "Move", "Madrid"])
-        self.assertEqual(v, ["B", "Madrid"])
+        v = diplomacy_eval([["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Support", "B"],\n
+                              ["D", "Austin", "Move", "London"]])
+        self.assertEqual(v, [["A", "[dead]"], ["B", "[dead]"], ["C", "[dead]"], ["D", "[dead]"]])
 
     def test_eval_3(self):
-        v = diplomacy_solve(["C", "London", "Move", "Madrid"])
-        self.assertEqual(v, ["C", "Madrid"])
-
-    def test_eval_4(self):
-        v = diplomacy_solve(["D", "Paris", "Support", "B"])
-        self.assertEqual(v, ["D", "Paris", "Support", "B"])
-
+        v = diplomacy_solve([["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Move", "Madrid"],\n
+                              ["D", "Paris", "Support", "B"]])
+        self.assertEqual(v, [["A", "[dead]"], ["B", "Madrid"], ["C", "[dead]"], ["D", "Paris"]])
 
     # -----
     # print
@@ -61,18 +59,18 @@ class TestCollatz (TestCase):
 
     def test_print(self):
         w = StringIO()
-        diplomacy_print(w, ["A", "Madrid", "Hold"])
-        self.assertEqual(w.getvalue(), "A Madrid Hold\n")
+        diplomacy_print(w, ["A", "Madrid"])
+        self.assertEqual(w.getvalue(), "A Madrid\n")
 
     def test_print_2(self):
         w = StringIO()
-        diplomacy_print(w, ["B", "Barcelona", "Move", "Madrid"])
-        self.assertEqual(w.getvalue(), "B Barcelona Move Madrid\n")
+        diplomacy_print(w, ["B", "[dead]"])
+        self.assertEqual(w.getvalue(), "B [dead]\n")
 
     def test_print_3(self):
         w = StringIO()
-        diplomacy_print(w, ["D", "Paris", "Support", "B"])
-        self.assertEqual(w.getvalue(), "D Paris Support B\n")
+        diplomacy_print(w, ["D", "Paris"])
+        self.assertEqual(w.getvalue(), "D Paris\n")
 
     # -----
     # solve
