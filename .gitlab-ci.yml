@@ -7,7 +7,7 @@ before_script:
     - printenv | sort
 
 diplomacy:
-    image: "python:3.5"
+    image: "python:3.6"
     script:
     - ls -al
     - make test
