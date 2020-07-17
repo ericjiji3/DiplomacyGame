@@ -1,4 +1,5 @@
 # TestDiplomacy.py
+# pls send help
 # unit tests that test corner and failure cases for diplomacy_solve()
 
 from io import StringIO
@@ -72,3 +73,11 @@ class TestDiplomacy (TestCase):
         diplomacy_solve(r, w)
         self.assertEqual(
             w.getvalue(), "A [dead]\nB Madrid\nC [dead]\nD Paris\n")
+
+# ----
+# main
+# ----
+
+if __name__ == "__main__":
+    main()
+

@@ -10,7 +10,7 @@ def killArmies(locationDict, location, army_indices):
     maximum = ["", -1]
     values = locationDict.get(location)
 
-    for val in values:
+    for val in values: # hello
         if val[1] > maximum[1]:
             maximum = [val[0],val[1]]
 
