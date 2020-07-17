@@ -10,7 +10,7 @@
 ><td align=right valign=bottom
 ><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Chaley%5Conedrive%5Cdesktop%5Ccs%20330e%5Cproject_2%5Cdiplomacy%5Cdiplomacy.py">c:\users\haley\onedrive\desktop\cs 330e\project_2\diplomacy\diplomacy.py</a></font></td></tr></table>
     <p><tt>#&nbsp;Diplomacy.py<br>
-#&nbsp;contains&nbsp;<a href="#-diplomacy_read">diplomacy_read</a>(),&nbsp;<a href="#-diplomacy_eval">diplomacy_eval</a>(),&nbsp;<a href="#-diplomacy_print">diplomacy_print</a>(),&nbsp;and&nbsp;<a href="#-diplomacy_solve">diplomacy_solve</a>()</tt></p>
+#&nbsp;contains&nbsp;<a href="#-diplomacy_eval">diplomacy_eval</a>(),&nbsp;<a href="#-diplomacy_print">diplomacy_print</a>(),&nbsp;and&nbsp;<a href="#-diplomacy_solve">diplomacy_solve</a>()</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#eeaa77">
@@ -18,17 +18,15 @@
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-diplomacy_eval"><strong>diplomacy_eval</strong></a>(lst)</dt><dd><tt>#&nbsp;--------------<br>
+<td width="100%"><dl><dt><a name="-convertDead"><strong>convertDead</strong></a>(locationDict)</dt><dd><tt>#&nbsp;helper&nbsp;function&nbsp;to&nbsp;change&nbsp;support&nbsp;values&nbsp;of&nbsp;(-1)&nbsp;to&nbsp;"[dead]"&nbsp;in&nbsp;eval()</tt></dd></dl>
+ <dl><dt><a name="-diplomacy_eval"><strong>diplomacy_eval</strong></a>(all_armies)</dt><dd><tt>#&nbsp;--------------<br>
 #&nbsp;diplomacy_eval<br>
 #&nbsp;--------------</tt></dd></dl>
- <dl><dt><a name="-diplomacy_print"><strong>diplomacy_print</strong></a>(w, lst)</dt><dd><tt>#&nbsp;---------------<br>
-#&nbsp;diplomacy_print<br>
-#&nbsp;---------------</tt></dd></dl>
- <dl><dt><a name="-diplomacy_read"><strong>diplomacy_read</strong></a>(s)</dt><dd><tt>#&nbsp;--------------<br>
-#&nbsp;diplomacy_read<br>
-#&nbsp;--------------</tt></dd></dl>
- <dl><dt><a name="-diplomacy_solve"><strong>diplomacy_solve</strong></a>(r, w)</dt><dd><tt>#&nbsp;---------------<br>
-#&nbsp;diplomacy_solve<br>
-#&nbsp;---------------</tt></dd></dl>
+ <dl><dt><a name="-diplomacy_print"><strong>diplomacy_print</strong></a>(w, result)</dt><dd><tt>print&nbsp;one&nbsp;armies&nbsp;outcome<br>
+w&nbsp;-&nbsp;a&nbsp;writer<br>
+result&nbsp;-&nbsp;a&nbsp;sorted&nbsp;dictionary&nbsp;of&nbsp;locations&nbsp;and&nbsp;the&nbsp;armies&nbsp;results&nbsp;(either&nbsp;[dead]&nbsp;or&nbsp;their&nbsp;support)</tt></dd></dl>
+ <dl><dt><a name="-diplomacy_solve"><strong>diplomacy_solve</strong></a>(r, w)</dt><dd><tt>r&nbsp;a&nbsp;reader<br>
+w&nbsp;a&nbsp;writer</tt></dd></dl>
+ <dl><dt><a name="-killArmies"><strong>killArmies</strong></a>(locationDict, location, army_indices)</dt><dd><tt>#&nbsp;helper&nbsp;functions&nbsp;to&nbsp;kill&nbsp;armies&nbsp;in&nbsp;eval()</tt></dd></dl>
 </td></tr></table>
 </body></html>
