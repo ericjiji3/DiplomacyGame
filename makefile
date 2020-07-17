@@ -1,9 +1,11 @@
 .PHONY: Diplomacy.log
 
-FILES :=                              \
-    Diplomacy.html                      \
-    Diplomacy.log                       \
-    Diplomacy.py                        \
+RUN := RunDiplomacy
+
+FILES :=                                 \
+    Diplomacy.html                       \
+    Diplomacy.log                        \
+    Diplomacy.py                         \
     RunDiplomacy1.in                     \
     RunDiplomacy1.out                    \
     RunDiplomacy2.in                     \
@@ -14,18 +16,15 @@ FILES :=                              \
     RunDiplomacy4.out                    \
     RunDiplomacy5.in                     \
     RunDiplomacy5.out                    \
-    RunDiplomacy.py                     \
-    TestDiplomacy.out                   \
-    TestDiplomacy.py 		      
+    RunDiplomacy.py                      \
+    TestDiplomacy.out                    \
+    TestDiplomacy.py 		         \
 
 #   cs330e-collatz-tests/haleyroe-RunCollatz.in   \
 #   cs330e-collatz-tests/haleyroe-RunCollatz.out  \
 #   cs330e-collatz-tests/haleyroe-TestCollatz.out \
 #   cs330e-collatz-tests/haleyroe-TestCollatz.py  \
 #
-
-# run all run diplomacies
-RUN := RunDiplomacy
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
@@ -65,7 +64,8 @@ Diplomacy.log:
 	#diff --strip-trailing-cr RunDiplomacy.tmp RunDiplomacy.out
 
 RunDiplomacy.tmp: RunDiplomacy.py
-	@for index in 1 2 3 4 5 ; do \
+	@for index in 1 2 3 4 5 ; \
+	do \
 		$(PYTHON) RunDiplomacy.py < $(RUN)$$index.in > $(RUN)$$index.tmp ; \
 		diff --strip-trailing-cr $(RUN)$$index.tmp $(RUN)$$index.out ; \
 	done
