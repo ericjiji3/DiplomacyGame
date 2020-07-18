@@ -107,6 +107,7 @@ def diplomacy_eval(all_armies):
             else:
                 val.append([army[0], 0])
             locationDict[army[1]] = val
+    locationDict = dict(sorted(locationDict.items()))
 
     # kill appropriate armies at each location
     for location in locationDict.keys():
@@ -116,6 +117,7 @@ def diplomacy_eval(all_armies):
     # convert -1 in locationDict to "[dead]"
     after_war_dict = convertDead(locationDict)
 
+    after_war_dict = dict(sorted(after_war_dict.items()))
     return after_war_dict
     
 # ---------------
