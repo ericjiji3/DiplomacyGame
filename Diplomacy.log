@@ -1,3 +1,39 @@
+commit f0d36baf543eda1a090d222a79c7916522664696
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 20:16:23 2020 -0500
+
+    attempting to fix dictionary order again
+
+commit eee3b7d36d4c874cfcb037bdcd945e3f3b8da3d3
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 20:03:16 2020 -0500
+
+    updated ci.yml to python 3.6
+
+commit 17fbb2762401129c8e12c6846ce61ebcf2d0b134
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 20:01:36 2020 -0500
+
+    sorted dictionary before printing
+
+commit 058e69c5de281fb68932e86c957424b580d43665
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 19:55:31 2020 -0500
+
+    uploading rundiplomacy acceptance test and testdiplomacy output
+
+commit f9554ac6a28e2211a2e714e40f7f59db9295bb30
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 19:48:31 2020 -0500
+
+    tried to fix ci and requirements again
+
+commit d044bece0dc6aeb2d68ec9ca6f33a261f61da0cc
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 19:37:14 2020 -0500
+
+    finally fixed diplomacy and unittests
+
 commit 54d6b662b1fa17923c82cb0476ff988c102d7bcb
 Merge: d96eb8a 112355a
 Author: Haley Roe <roehaleyc@gmail.com>
