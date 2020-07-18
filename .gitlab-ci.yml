@@ -10,4 +10,8 @@ diplomacy:
     image: "python:3.6"
     script:
     - ls -al
+<<<<<<< HEAD
     - make test
+=======
+    - make test
+>>>>>>> 29f449ff0d42656852d1d1da5df449de0bf58fc4
