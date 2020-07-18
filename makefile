@@ -19,7 +19,6 @@ FILES :=                                 \
     RunDiplomacy.py                      \
     TestDiplomacy.out                    \
     TestDiplomacy.py 		         \
-
    cs330e-diplomacy-tests/haleyroe-RunDiplomacy1.in   \
    cs330e-diplomacy-tests/haleyroe-RunDiplomacy1.out  \
    cs330e-diplomacy-tests/haleyroe-RunDiplomacy2.in   \
@@ -32,7 +31,6 @@ FILES :=                                 \
    cs330e-diplomacy-tests/haleyroe-RunDiplomacy5.out  \
    cs330e-diplomacy-tests/haleyroe-TestDiplomacy.out \
    cs330e-diplomacy-tests/haleyroe-TestDiplomacy.py  \
-
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
