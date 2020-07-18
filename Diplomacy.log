@@ -1,0 +1,60 @@
+commit 54d6b662b1fa17923c82cb0476ff988c102d7bcb
+Merge: d96eb8a 112355a
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 17:06:08 2020 -0500
+
+    Merge branch 'dev' of https://gitlab.com/haleyroe/diplomacy into dev
+
+commit d96eb8a45757dd3fb58107a236a1c74b8fa18fe1
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 17:03:43 2020 -0500
+
+    updated diplomacy and unit tests
+
+commit 9da294911fa1c76cd381ba931373db882d222707
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 16:48:44 2020 -0500
+
+    updated versions of diplomacy and unit tests
+
+commit 112355ae9b039ba178b87ed53970f68639d4099e
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 21:46:31 2020 +0000
+
+    add .gitlab-ci.yml to dev branch
+
+commit e3c2b7e86586b39d1b236f8afdb70b2fd5beacdb
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 16:37:26 2020 -0500
+
+    updated makefile
+
+commit 9f9926cf0ea4a344a103c8e3aca65a0d9600e117
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 16:21:42 2020 -0500
+
+    added .gitignore file to repo
+
+commit 30e1c8207983232e648faa62b4f8aff7a37ff6df
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Fri Jul 17 16:06:39 2020 -0500
+
+    added requirements file to repo
+
+commit dfcf7aece55303c8863db7ffeb1e0f0b64ff7ca5
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Tue Jul 14 21:38:36 2020 -0500
+
+    updated TestDiplomacy.py and worked on diplomacy_solve()
+
+commit 0ea7027275e5c968a4d2f8082645ad16d4371b05
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Mon Jul 13 20:42:54 2020 -0500
+
+    first diplomacy commit
+
+commit 04c8f5eebf2dd0e3ae829f60df74cd6e352fe4bc
+Author: Haley Roe <roehaleyc@gmail.com>
+Date:   Tue Jul 7 20:37:59 2020 +0000
+
+    Initial commit
