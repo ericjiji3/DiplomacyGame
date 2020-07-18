@@ -10,7 +10,7 @@ def killArmies(locationDict, location, army_indices):
     maximum = ["", -1]
     values = locationDict.get(location)
 
-    for val in values: # hello
+    for val in values:
         if val[1] > maximum[1]:
             maximum = [val[0],val[1]]
 
@@ -97,7 +97,7 @@ def diplomacy_eval(all_armies):
     for army in all_armies:
         if army[1] not in locationDict:
             if len(army) > 2:
-                locationDict[str(army[1])] = [[army[0], army[2]]]
+                locationDict[army[1]] = [[army[0], army[2]]]
             else:
                 locationDict[army[1]] = [[army[0], 0]]
         else: # if in locationDict
@@ -117,7 +117,7 @@ def diplomacy_eval(all_armies):
     after_war_dict = convertDead(locationDict)
 
     return after_war_dict
-
+    
 # ---------------
 # diplomacy_print
 # ---------------
@@ -139,10 +139,10 @@ def diplomacy_print(w, result):
                     result_lst.append(val[0] + " " + key)
         except IndexError:
             result_lst.append(val[0] + " " + key)
-
+    
     for i in result_lst:
         w.write(i + "\n")
-
+    
 # ---------------
 # diplomacy_solve
 # ---------------
@@ -155,16 +155,15 @@ def diplomacy_solve(r, w):
     # pre-condition / argument validity
     assert r != ""
 
+    # read-ish
     all_armies = []
-    for s in r:
-        line = s.split()
-        all_armies.append(line)        
-    
-    #all_armies = diplomacy_read(r)
+    for i in r:
+        i = i.split()
+        all_armies.append(i)
+
+    # eval
     after_war = diplomacy_eval(all_armies)
 
     # post-condition / return-value validity
     assert after_war != {}
     diplomacy_print(w, after_war)
-
-

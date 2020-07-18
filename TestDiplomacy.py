@@ -20,15 +20,15 @@ class TestDiplomacy (TestCase):
 
     def test_eval(self):
         v = diplomacy_eval([["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Move", "Madrid"], ["D", "Paris", "Support", "B"], ["E", "Austin", "Support", "A"]])
-        self.assertEqual(v, {"Madrid":[["A",1], ["B",1], ["C",0]], "Paris":[["D",0]], "Austin":[["E",0]]})
+        self.assertEqual(v, {"Madrid":[["A","[dead]"], ["B","[dead]"], ["C","[dead]"]], "Paris":[["D",0]], "Austin":[["E",0]]})
 
     def test_eval_2(self):
         v = diplomacy_eval([["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Support", "B"], ["D", "Austin", "Move", "London"]])
-        self.assertEqual(v, {"Madrid":[["A",0],["B",0]], "London":[["C",0], ["D",0]]})
+        self.assertEqual(v, {"Madrid":[["A", "[dead]"], ["B","[dead]"]], "London":[["C","[dead]"], ["D","[dead]"]]})
 
     def test_eval_3(self):
         v = diplomacy_eval([["A", "Madrid", "Hold"], ["B", "Barcelona", "Move", "Madrid"], ["C", "London", "Move", "Madrid"], ["D", "Paris", "Support", "B"]])
-        self.assertEqual(v, {"Madrid":[["A",0],["B",1],["C",0]],"Paris":[["D",0]]})
+        self.assertEqual(v, {"Madrid":[["A","[dead]"],["B",1],["C","[dead]"]],"Paris":[["D",0]]})
 
     # -----
     # print
@@ -36,17 +36,17 @@ class TestDiplomacy (TestCase):
 
     def test_print(self):
         w = StringIO()
-        diplomacy_print(w, {"Madrid":[["A",1], ["B",1], ["C",0]], "Paris":[["D",0]], "Austin":[["E",0]]})
+        diplomacy_print(w, {"Madrid":[["A","[dead]"], ["B","[dead]"], ["C","[dead]"]], "Paris":[["D",0]], "Austin":[["E",0]]})
         self.assertEqual(w.getvalue(), "A [dead]\nB [dead]\nC [dead]\nD Paris\nE Austin\n")
 
     def test_print_2(self):
         w = StringIO()
-        diplomacy_print(w, {"Madrid":[["A",0],["B",0]], "London":[["C",0], ["D",0]]})
+        diplomacy_print(w, {"Madrid":[["A","[dead]"],["B","[dead]"]], "London":[["C","[dead]"], ["D","[dead]"]]})
         self.assertEqual(w.getvalue(), "A [dead]\nB [dead]\nC [dead]\nD [dead]\n")
 
     def test_print_3(self):
         w = StringIO()
-        diplomacy_print(w, {"Madrid":[["A",0],["B",1],["C",0]],"Paris":[["D",0]]})
+        diplomacy_print(w, {"Madrid":[["A","[dead]"],["B",1],["C","[dead]"]],"Paris":[["D",0]]})
         self.assertEqual(w.getvalue(), "A [dead]\nB Madrid\nC [dead]\nD Paris\n")
 
     # -----
