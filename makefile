@@ -20,11 +20,19 @@ FILES :=                                 \
     TestDiplomacy.out                    \
     TestDiplomacy.py 		         \
 
-#   cs330e-collatz-tests/haleyroe-RunCollatz.in   \
-#   cs330e-collatz-tests/haleyroe-RunCollatz.out  \
-#   cs330e-collatz-tests/haleyroe-TestCollatz.out \
-#   cs330e-collatz-tests/haleyroe-TestCollatz.py  \
-#
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy1.in   \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy1.out  \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy2.in   \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy2.out  \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy3.in   \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy3.out  \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy4.in   \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy4.out  \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy5.in   \
+   cs330e-diplomacy-tests/haleyroe-RunDiplomacy5.out  \
+   cs330e-diplomacy-tests/haleyroe-TestDiplomacy.out \
+   cs330e-diplomacy-tests/haleyroe-TestDiplomacy.py  \
+
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
