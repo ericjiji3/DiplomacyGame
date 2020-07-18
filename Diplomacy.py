@@ -163,6 +163,7 @@ def diplomacy_solve(r, w):
 
     # eval
     after_war = diplomacy_eval(all_armies)
+    after_war = dict(sorted(after_war.items()))
 
     # post-condition / return-value validity
     assert after_war != {}
