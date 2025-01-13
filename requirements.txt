@@ -4,4 +4,4 @@ coverage==5.1
 numpy==1.18.4
 pep8==1.7.1
 pylint==2.5.2
-virtualenv==20.0.21
+virtualenv==20.26.6
